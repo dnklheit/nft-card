@@ -1,0 +1,133 @@
+/* ## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600 */
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--main-bg);
+  font-family: "Outfit", sans-serif; /* Outfit font if available */
+  font-weight: 400; /* Default font weight */
+}
+
+h1 {
+  font-family: "Outfit", sans-serif; /* Fallback to sans-serif if Outfit is unavailable */
+  font-weight: 600; /* Apply a heavier weight for h1 headings */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--card-bg);
+  margin: auto;
+  gap: 1.5rem;
+  width: 400pxo jm;
+}
+
+.container img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+hr {
+  width: 100%;
+}
+
+.info h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.info p {
+  color: var(--line);
+}
+
+.info .eth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info .eth .currency svg {
+  padding-top: 0.25rem;
+}
+
+.info .eth .currency span {
+  color: hsl(178, 100%, 50%);
+  margin-left: 0.35rem;
+}
+
+.info .eth .time-left svg {
+  padding-top: 0.25rem;
+}
+
+.info .eth .time-left span {
+  margin-left: 0.35rem;
+  color: var(--line);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  color: var(--line);
+}
+
+.bottom img {
+  width: 30px;
+  height: 30px;
+  border: 1px white solid;
+  border-radius: 50%;
+}
+
+.bottom span {
+  color: var(--white);
+}
